@@ -1,0 +1,259 @@
+
+
+.main {
+    width: 100%;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: rgb(113,131,85);
+    background: linear-gradient(90deg, rgba(113,131,85,1) 0%, rgba(207,225,185,1) 100%);
+    background-repeat: no-repeat;
+}
+
+.header {
+    background-color: #e9ecef;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header p {
+    color: #212529;
+    font-size: 20px;
+    font-weight: 600;
+    margin: auto 0;
+    margin-left: 15px;
+}
+
+.headerSpace {
+    display: flex;
+    flex: 1;
+}
+
+
+
+
+
+/* Estilo del boton */
+.btnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+}
+
+.btn {
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f2cc8f;
+}
+
+.btn:hover {
+    background-color: #3d405b !important;
+    transform: scale(1.05) !important;
+}
+
+.btnText {
+    text-align: "center";
+    font-size: 30;
+    font-weight: bold;
+    color: #212529;
+    font-weight: "300";
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btnText:hover {
+    color: #e9ecef;
+}
+
+.formulario{
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 20px 20px 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.formRowRegister {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formTextLeft {
+    font-size: 15px;
+    font-weight: bold;
+    color: #212529;
+    line-height: 1;
+}
+
+.secctionRight {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    justify-content: center;
+    line-height: 1;
+}
+
+
+
+
+
+
+
+
+/* Estilo Cards */
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.iconCardContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 70px;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.cardIcon {
+    font-size: 130px;
+    color:#e9ecef;
+}
+
+.infoCard {
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #bfbfbf;
+    transition: all 0.3s;
+}
+
+.card .cardText {
+    margin-top: 120px;
+    width: 100%;
+    line-height: 1;
+    opacity: 0;
+}
+
+.cardText p {
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.cardName {
+    font-size: 20px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.cardInfo {
+    font-size: 16px;
+    font-weight: 400;
+    color: #212529;
+}
+
+.switchContainer {
+    opacity: 0;
+    display: flex;
+    height: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.switchContainerEdit {
+    opacity: 1;
+    display: flex;
+    height: 20px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.card:hover .iconCardContainer {
+    top: 20px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    padding-bottom: 0;
+    border-radius: 50px;
+}
+
+.card:hover .switchContainer {
+    opacity: 1;
+}
+
+.card:hover .cardIcon {
+    font-size: 50px;
+}
+
+.card:hover .infoCard {
+    left: 40%;
+    top: 20px;
+    height: 80px;
+    color: #212529;
+}
+
+.card:hover .cardName {
+    white-space: nowrap;           /* Evitar saltos de línea */
+    text-overflow: ellipsis;;       /* Mostrar "..." si el texto es demasiado largo */
+    overflow: hidden;              /* Cortar el texto excedente */
+    max-width: 150px;              /* Define un ancho fijo o máximo */
+    display: inline-block; 
+}
+
+.card:hover .cardText {
+    animation: fadeUp 0.5s forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
